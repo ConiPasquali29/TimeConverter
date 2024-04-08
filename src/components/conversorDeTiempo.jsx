@@ -30,7 +30,7 @@ const ConversorDeTiempo = () => {
   };
 
   const containerStyle = {
-    backgroundColor: mode ? "#F2FDFF" : "#242424",
+    backgroundColor: mode ? "#e9e9e9" : "#242424",
     color: mode ? "#242424" : "#F2FDFF",
     transition: "background-color 0.5s ease",
   };
@@ -40,7 +40,16 @@ const ConversorDeTiempo = () => {
       className={`container ${mode ? "container-transition" : ""}`}
       style={{ ...containerStyle }}
     >
-      <button onClick={handleMode}>{mode ? "Dia" : "Noche"}</button>
+      <button
+        style={{
+          color: mode ? "black" : "#F2FDFF",
+          backgroundColor: mode ? "white" : "#1a1a1a",
+          border: mode ? "1px solid black" : "1px solid #F2FDFF",
+        }}
+        onClick={handleMode}
+      >
+        {mode ? "Dia" : "Noche"}
+      </button>
       <h2>Conversor de Tiempo</h2>
       <section className="time">
         <label>Horas</label>
